@@ -1,0 +1,86 @@
+﻿<Page x:Class="PPRazumovskiy.Pages.MathPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PPRazumovskiy.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MathPage">
+
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="42" HorizontalAlignment="Stretch">
+                <TextBlock Text="Транспортная задача" FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Margin="0 0 0 35"/>
+                <Grid HorizontalAlignment="Center" Margin="0 0 0 20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Запасы поставщика А" Margin="5" Grid.Column="0" Grid.Row="0"/>
+                    <TextBlock Text="Запасы поставщика B" Margin="5" Grid.Column="1" Grid.Row="0"/>
+                    <TextBlock Text="Запасы поставщика C" Margin="5" Grid.Column="2" Grid.Row="0"/>
+                    <TextBox x:Name="stock1" Grid.Column="0" Margin="5" Grid.Row="1" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="stock2" Grid.Column="1" Margin="5" Grid.Row="1" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="stock3" Grid.Column="2" Margin="5" Grid.Row="1" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBlock Text="Потребности покупателя А" Margin="5"  Grid.Column="0" Grid.Row="2"/>
+                    <TextBlock Text="Потребности покупателя B" Margin="5" Grid.Column="1" Grid.Row="2"/>
+                    <TextBlock Text="Потребности покупателя C" Margin="5" Grid.Column="2" Grid.Row="2"/>
+                    <TextBox x:Name="needs1" Grid.Column="0" Margin="5" Grid.Row="3" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="needs2" Grid.Column="1" Margin="5" Grid.Row="3" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="needs3" Grid.Column="2" Margin="5" Grid.Row="3" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBlock Text="Матрица" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="5"/>
+                    <TextBox x:Name="value1" Grid.Column="0" Margin="5" Grid.Row="5" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value2" Grid.Column="1" Margin="5" Grid.Row="5" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value3" Grid.Column="2" Margin="5" Grid.Row="5" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value4" Grid.Column="0" Margin="5" Grid.Row="6" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value5" Grid.Column="1" Margin="5" Grid.Row="6" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value6" Grid.Column="2" Margin="5" Grid.Row="6" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value7" Grid.Column="0" Margin="5" Grid.Row="7" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value8" Grid.Column="1" Margin="5" Grid.Row="7" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    <TextBox x:Name="value9" Grid.Column="2" Margin="5" Grid.Row="7" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                </Grid>
+                <Button x:Name="getAnswerBtn" Click="getAnswerBtn_Click" Height="44" Background="#1771DB" Foreground="White" FontSize="14" FontWeight="Bold" HorizontalAlignment="Stretch" Content="Получить решение" Margin="0 0 0 35"/>
+                <StackPanel Orientation="Vertical" x:Name="answerPanel" Visibility="Hidden" Margin="0 0 0 20">
+                    <TextBlock FontSize="14" FontWeight="Bold" Text="Матрица с перераспределением" Margin="0 0 0 15" HorizontalAlignment="Center"/>
+                    <Grid HorizontalAlignment="Center" Margin="0 0 0 20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBox x:Name="answer1" IsReadOnly="True" Grid.Column="0" Margin="5" Grid.Row="0" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer2" IsReadOnly="True" Grid.Column="1" Margin="5" Grid.Row="0" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer3" IsReadOnly="True" Grid.Column="2" Margin="5" Grid.Row="0" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer4" IsReadOnly="True" Grid.Column="0" Margin="5" Grid.Row="1" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer5" IsReadOnly="True" Grid.Column="1" Margin="5" Grid.Row="1" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer6" IsReadOnly="True" Grid.Column="2" Margin="5" Grid.Row="1" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer7" IsReadOnly="True" Grid.Column="0" Margin="5" Grid.Row="2" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer8" IsReadOnly="True" Grid.Column="1" Margin="5" Grid.Row="2" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                        <TextBox x:Name="answer9" IsReadOnly="True" Grid.Column="2" Margin="5" Grid.Row="2" Height="44" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLines="1"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontSize="14" FontWeight="Bold" Text="Ответ: "/>
+                        <TextBlock FontSize="14" FontWeight="Bold" x:Name="answerText"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

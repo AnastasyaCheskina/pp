@@ -1,0 +1,27 @@
+﻿<Page x:Class="PPRazumovskiy.Pages.BookPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PPRazumovskiy.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BookPage">
+
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="42" HorizontalAlignment="Stretch">
+                <TextBlock Text="Справочная информация" FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Margin="0 0 0 15"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image1.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image2.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image3.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image4.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image5.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image6.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image7.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image8.png" Margin="0 0 0 5"/>
+                <Image HorizontalAlignment="Stretch" Source="/Images/Book/image9.png" Margin="0 0 0 5"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
